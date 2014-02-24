@@ -1,0 +1,41 @@
+{{!< default}}
+
+<!-- BEGIN SIDEBAR -->
+<div class="freecoding-sidebar" {{#if @blog.cover}}style="background: url({{@blog.cover}})"{{/if}}>
+	{{> menu}}
+	{{> logo}}
+	{{> social-links}}
+</div>
+<!-- END SIDEBAR -->
+
+<!-- BEGIN SECTION -->
+<section class="freecoding-section">
+	{{#foreach posts}}
+		<!-- BEGIN ARTICLE -->
+		<article class="freecoding-article {{post_class}}">
+			<h2 class="freecoding-post-header">
+				<a href="{{url}}">{{title}}</a>
+			</h2>
+			<div class="freecoding-post-short-info">
+				{{date published_at format="DD MMMM YYYY, HH:MM"}}
+				{{#if featured}}<span class="freecoding-featured">FEATURED</span>{{/if}}
+				{{#if tags}}
+					<div class="freecoding-post-tags"><i class="fa fa-tag"></i> <i>{{tags separator=", "}}</i></div>
+				{{/if}}
+			</div>
+			<div class="freecoding-post-content">{{content}}</div>
+		</article>
+		<!-- END ARTICLE -->
+
+		<!-- BEGIN POST MENU -->
+		<div class="freecoding-post-menu">
+			<a href="{{url}}">Continue reading <i class="fa fa-angle-double-right"></i></a>
+		</div>
+		<!-- END POST MENU -->
+	{{/foreach}}
+
+	{{pagination}}
+</section>
+<!-- END SECTION -->
+
+{{> footer}}

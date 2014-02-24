@@ -1,0 +1,84 @@
+{{!< default}}
+<!-- BEGIN SIDEBAR -->
+<div class="freecoding-sidebar" {{#if @blog.cover}}style="background: url({{@blog.cover}})"{{/if}}>
+	{{> menu}}
+	{{> logo}}
+	{{> post-info}}
+	{{> social-links}}
+</div>
+<!-- END SIDEBAR -->
+
+<!-- BEGIN SECTION -->
+<section class="freecoding-section">
+	{{#post}}
+
+		<!-- BEGIN ARTICLE -->
+		<article class="freecoding-article {{post_class}}">
+			<h1 class="freecoding-post-header">{{title}}</h1>
+			<div class="freecoding-post-short-info">
+				{{date published_at format="DD MMMM YYYY, HH:MM"}}				
+				{{#if featured}}<span class="freecoding-featured">FEATURED</span>{{/if}}
+				{{#if tags}}
+					<div class="freecoding-post-tags"><i class="fa fa-tag"></i> <i>{{tags separator=", "}}</i></div>
+				{{/if}}
+			</div>
+			<div class="freecoding-post-content">{{content}}</div>
+		</article>
+		<!-- END ARTICLE -->
+
+		
+		<!-- BEGIN ABOUT AUTHOR BLOCK -->
+		<div class="freecoding-about-author freecoding-clearfix">
+			{{#if author.image}}
+			<div class="freecoding-author">
+				<div class="freecoding-image" style="{{#if author.image}}background: url({{author.image}}){{else}}background: #afafaf;{{/if}}"></div>
+			</div>
+			<div class="freecoding-bio">
+				{{#if author.website}}
+					<a href="{{author.website}}">{{author.name}}</a>
+				{{else}}
+					{{author.name}}
+				{{/if}}
+
+				{{#if author.email}}
+					<a href="mailto:{{author.email}}" style="float: right; color: #afafaf" title="Сontact me by mail"><i class="fa fa-envelope"></i></a>
+				{{/if}}
+				<p>{{author.bio}}</p>
+			</div>
+			{{else}}
+				{{#if author.website}}
+					<a href="{{author.website}}">{{author.name}}</a>
+				{{else}}
+					{{author.name}}
+				{{/if}}
+
+				{{#if author.email}}
+					<a href="mailto:{{author.email}}" style="float: right; color: #afafaf" title="Сontact me by mail"><i class="fa fa-envelope"></i></a>
+				{{/if}}
+				<p>{{author.bio}}</p>
+			{{/if}}
+		</div>
+		<!-- END ABOUT AUTHOR BLOCK -->
+	{{/post}}
+	
+	<!-- BEGIN COMMENTS -->
+	<div class="freecoding-comments">
+		<div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	        var disqus_shortname = 'suinly'; // required: replace example with your forum shortname
+
+	        /* * * DON'T EDIT BELOW THIS LINE * * */
+	        (function() {
+	            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	        })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+	<!-- BEGIN COMMENTS -->
+    
+</section>
+<!-- END SECTION -->
+{{> footer}}

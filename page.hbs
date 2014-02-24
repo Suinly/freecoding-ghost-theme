@@ -1,0 +1,21 @@
+{{!< default}}
+<!-- BEGIN SIDEBAR -->
+<div class="freecoding-sidebar" {{#if @blog.cover}}style="background: url({{@blog.cover}})"{{/if}}>
+	{{> menu}}
+	{{> logo}}
+	{{> post-info}}
+	{{> social-links}}
+</div>
+<!-- END SIDEBAR -->
+
+<!-- BEGIN SECTION -->
+<section class="freecoding-section">
+	{{#post}}
+		<article class="freecoding-article {{post_class}}">
+			<h1 class="freecoding-post-header">{{title}}</h1>
+			<div class="freecoding-post-content">{{content}}</div>
+		</article>
+	{{/post}}    
+</section>
+<!-- END SECTION -->
+{{> footer}}

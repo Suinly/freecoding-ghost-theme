@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{meta_description}}">
+    <meta name="author" content="">
+    <title>Ooops, error!</title>    
+    {{ghost_head}}
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" />
+    <style>
+		.freecoding-centered {
+			text-align: center;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-top: -50px;
+			margin-left: -125px;
+			width: 250px;
+			height: 100px;
+		}
+    </style>
+  </head>
+  <body>
+    <div class="freecoding-centered">
+    	<h1>Ooops, error!</h1>
+    	<a href="/">Go back</a>
+    </div>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {{ghost_foot}}
+  </body>
+</html>
