@@ -1,4 +1,4 @@
-FreeCoding - Responsive Theme for Personal Blog
+FreeCoding - Responsive Theme for Ghost
 --------------------------------------------
 
 **FreeCoding** is fully responsive and minimal theme for bloggers.
