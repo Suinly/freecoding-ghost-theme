@@ -3,6 +3,8 @@ FreeCoding - Responsive Theme for Ghost
 
 **FreeCoding** is fully responsive and minimal theme for bloggers.
 
+![screenshot](http://habrastorage.org/files/e6d/0cf/663/e6d0cf663a674af6a44e3126effeb80e.PNG)
+
 Features
 --------
 - Ghost 0.4.x Compatible
